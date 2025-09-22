@@ -33,8 +33,6 @@ export default function SignInCommand() {
 
       if (!res.ok) throw new Error("Login failed");
 
-      if (!res.ok) throw new Error("Login failed");
-
       // Type the JSON response
       const data: LoginResponse = (await res.json()) as LoginResponse;
 
