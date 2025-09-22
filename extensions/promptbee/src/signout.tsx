@@ -23,7 +23,7 @@ export default function Logout() {
       await showHUD("👋 You are signed out from PromptBee");
       setDone(true);
     } catch (err) {
-      console.log(err);
+      console.error(err);
       await showHUD("⚠️ Sign out failed");
     }
   }
