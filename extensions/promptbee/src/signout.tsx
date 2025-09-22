@@ -15,7 +15,7 @@ export default function Logout() {
           Authorization: `Bearer ${await getValidAccessToken()}`,
         },
       });
-      console.log(res);
+      if (!res.ok) throw new Error("Sign out failed");
       if (!res.ok) throw new Error("Sign out failed");
 
       await clearSession();
